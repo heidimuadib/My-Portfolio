@@ -94,19 +94,19 @@ export default function Contact() {
         <form className="contact-form glass-card reveal reveal-delay-2" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
-            <input type="text" id="name" placeholder="Your name" required />
+            <input type="text" id="name" name="name" placeholder="Your name" required />
           </div>
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
-            <input type="email" id="email" placeholder="your@email.com" required />
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
           </div>
           <div className="form-group">
             <label htmlFor="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Project inquiry..." />
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry..." />
           </div>
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
           </div>
           <button
             type="submit"
