@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Alex Rivera | AI Automation Specialist & Full Stack Developer",
+  title: "Paul Benjie Bongaos | AI Automation Specialist & Full Stack Developer",
   description:
     "Portfolio of an AI Automation Specialist & Full Stack Developer showcasing projects in AI, automation, and modern web development.",
 };

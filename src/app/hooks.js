@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-export function useScrollReveal() {
+export function useScrollReveal(dependencies = []) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export function useScrollReveal() {
     revealEls.forEach((child) => observer.observe(child));
 
     return () => observer.disconnect();
-  }, []);
+  }, dependencies);
 
   return ref;
 }

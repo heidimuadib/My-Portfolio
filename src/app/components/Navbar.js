@@ -5,8 +5,6 @@ const NAV_ITEMS = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -43,7 +41,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar${scrolled ? " scrolled" : ""}`} id="navbar">
       <a href="#" className="nav-logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-        &lt;AR /&gt;
+        &lt;PB /&gt;
       </a>
 
       <ul className={`nav-links${mobileOpen ? " active" : ""}`}>
@@ -60,9 +58,9 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <a href="#contact" className="nav-cta" onClick={(e) => handleClick(e, "#contact")}>
-        Let&apos;s Talk
-      </a>
+
+      {/* Invisible spacer to center the nav links on desktop */}
+      <div className="nav-spacer" style={{ width: "60px" }}></div>
 
       <button
         className="menu-toggle"

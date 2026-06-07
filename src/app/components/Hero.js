@@ -54,27 +54,12 @@ export default function Hero() {
               <i className="fas fa-paper-plane"></i> Get In Touch
             </a>
           </div>
-          <div className="hero-stats">
-            {[
-              { value: "25+", label: "Projects" },
-              { value: "3+", label: "Years Exp." },
-              { value: "15+", label: "Technologies" },
-              { value: "99%", label: "Uptime" },
-            ].map((s) => (
-              <div key={s.label}>
-                <div className="hero-stat-value">{s.value}</div>
-                <div className="hero-stat-label">{s.label}</div>
-              </div>
-            ))}
-          </div>
+
         </div>
         <div className="hero-visual">
           <div className="hero-image-wrapper">
-            <img src="/images/profile-avatar.png" alt="Alex Rivera" />
+            <img src="/images/profile-avatar.png" alt="Paul Benjie Bongaos" />
           </div>
-          <div className="floating-card">🤖 AI/ML Engineer</div>
-          <div className="floating-card">⚡ Full Stack Dev</div>
-          <div className="floating-card">🔧 Automation Pro</div>
         </div>
       </div>
     </section>

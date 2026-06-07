@@ -3,9 +3,9 @@ import { useState } from "react";
 import { useScrollReveal } from "../hooks";
 
 const CONTACT_ITEMS = [
-  { icon: "fas fa-envelope", label: "Email", value: "alex@example.com", href: "mailto:alex@example.com" },
-  { icon: "fas fa-map-marker-alt", label: "Location", value: "San Francisco, CA", href: "#" },
-  { icon: "fas fa-phone", label: "Phone", value: "+1 (555) 123-4567", href: "#" },
+  { icon: "fas fa-envelope", label: "Email", value: "paul.bongaos.work@gmail.com", href: "mailto:paul.bongaos.work@gmail.com" },
+  { icon: "fas fa-map-marker-alt", label: "Location", value: "Sta. Cruz, Calape, Bohol - Philippines", href: "#" },
+  { icon: "fas fa-phone", label: "Phone", value: "+63 9944714053", href: "tel:+639944714053" },
 ];
 
 const SOCIALS = [
@@ -19,13 +19,43 @@ export default function Contact() {
   const ref = useScrollReveal();
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      e.target.reset();
-    }, 3000);
+    setLoading(true);
+
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value,
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          e.target.reset();
+        }, 5000);
+      } else {
+        alert("Oops! Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Oops! Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -81,13 +111,18 @@ export default function Contact() {
           <button
             type="submit"
             className="btn-primary"
+            disabled={loading || submitted}
             style={{
               justifyContent: "center",
               background: submitted ? "linear-gradient(135deg, #10b981, #00d4ff)" : undefined,
+              opacity: loading ? 0.7 : 1,
+              cursor: loading ? "not-allowed" : "pointer",
             }}
           >
             {submitted ? (
               <><i className="fas fa-check"></i> Message Sent!</>
+            ) : loading ? (
+              <><i className="fas fa-spinner fa-spin"></i> Sending...</>
             ) : (
               <><i className="fas fa-paper-plane"></i> Send Message</>
             )}

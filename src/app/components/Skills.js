@@ -3,21 +3,10 @@ import { useScrollReveal, useSkillBarAnimation } from "../hooks";
 
 const SKILLS = [
   {
-    icon: "🧠",
-    title: "AI & Machine Learning",
-    desc: "Designing and deploying intelligent models for NLP, computer vision, and predictive analytics.",
-    tags: ["TensorFlow", "PyTorch", "OpenAI API", "LangChain", "Hugging Face", "scikit-learn"],
-    tagColor: "",
-    bars: [
-      { label: "Deep Learning", value: 92, color: "cyan" },
-      { label: "NLP / LLMs", value: 88, color: "cyan" },
-    ],
-  },
-  {
     icon: "⚙️",
     title: "Automation & DevOps",
     desc: "Building intelligent workflows, RPA bots, and CI/CD pipelines for maximum efficiency.",
-    tags: ["Zapier", "Make (Integromat)", "n8n", "Docker", "GitHub Actions", "Selenium"],
+    tags: ["GoHighLevel", "n8n", "Make (Integromat)", "Zapier", "Slack", "Zoom", "Tally", "Airtable", "Calendly", "Docker", "GitHub Actions"],
     tagColor: "purple",
     bars: [
       { label: "Workflow Automation", value: 95, color: "purple" },
@@ -28,7 +17,7 @@ const SKILLS = [
     icon: "🎨",
     title: "Frontend Development",
     desc: "Crafting responsive, performant, and beautiful user interfaces with modern frameworks.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "Framer Motion"],
+    tags: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5/CSS3", "Tailwind CSS", "Vue.js", "Framer Motion"],
     tagColor: "green",
     bars: [
       { label: "React / Next.js", value: 90, color: "green" },
@@ -39,7 +28,7 @@ const SKILLS = [
     icon: "🔧",
     title: "Backend & Cloud",
     desc: "Engineering robust APIs, microservices, and cloud-native architectures at scale.",
-    tags: ["Node.js", "Python", "PostgreSQL", "MongoDB", "AWS", "Firebase"],
+    tags: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Firebase", "PHP", "Laravel (PHP Framework)", "Supabase", "Java", "C++", "MySQL"],
     tagColor: "orange",
     bars: [
       { label: "API Architecture", value: 90, color: "cyan" },
