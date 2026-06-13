@@ -4,6 +4,50 @@ import { useScrollReveal } from "../hooks";
 
 const PROJECTS = [
   {
+    image: "/images/sparky.png",
+    category: "AI & Automation",
+    title: "Sparky Electrical GHL Automation",
+    desc: "An automated lead tracking and routing workflow in GoHighLevel. Incoming leads via webhooks are instantly processed, with custom field mapping for urgency levels. The system automatically routes leads into the Sparky Pipeline, creates opportunity cards, sends refined SMS messages, and triggers customized internal Slack notifications to alert the team instantly.",
+    metrics: [
+      { value: "Instant", label: "Lead Capture" },
+      { value: "GHL", label: "Pipeline Sync" },
+      { value: "Custom", label: "Slack Alerts" },
+    ],
+    tech: [
+      { name: "GoHighLevel", color: "orange" },
+      { name: "Slack API", color: "purple" },
+      { name: "Webhooks", color: "purple" },
+      { name: "React", color: "purple" },
+      { name: "Tailwind CSS", color: "cyan" },
+    ],
+    liveLink: "https://sparky-au.vercel.app/",
+    sourceLink: "#",
+    liveLabel: "Live Site",
+    gallery: ["/images/sparky.png"],
+  },
+  {
+    image: "/images/project-plumber.png",
+    category: "AI & Automation",
+    title: "Emergency Plumber AU & GHL Automation",
+    desc: "An automated lead generation and triage system. When a lead is captured via webhook, GoHighLevel (GHL) processes conditional logic to segment urgent and non-urgent contacts, dynamically routes them into distinct pipelines/opportunities, and alerts staff instantly on Slack for high-priority emergency responses.",
+    metrics: [
+      { value: "GHL", label: "Pipeline Sync" },
+      { value: "Instant", label: "Slack Alerts" },
+      { value: "Dual-Path", label: "Lead Triage" },
+    ],
+    tech: [
+      { name: "GoHighLevel", color: "orange" },
+      { name: "Slack API", color: "purple" },
+      { name: "Webhooks", color: "purple" },
+      { name: "React", color: "purple" },
+      { name: "Tailwind CSS", color: "cyan" },
+    ],
+    liveLink: "https://emergency-plumber-au.vercel.app/",
+    sourceLink: "#",
+    liveLabel: "Live Site",
+    gallery: ["/images/project-plumber.png"],
+  },
+  {
     image: "/images/portfolio-contact-automation.png",
     category: "AI & Automation",
     title: "Portfolio Contact Form Automation",
