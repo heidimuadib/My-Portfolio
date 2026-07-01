@@ -4,6 +4,26 @@ import { useScrollReveal } from "../hooks";
 
 const PROJECTS = [
   {
+    image: "/images/project-automation.png",
+    category: "AI & Automation",
+    title: "Apex Premium Roofing Automation",
+    desc: "A hybrid pipeline automation system for high-ticket roofing. Features instant web lead capture, dynamic regional task routing in GoHighLevel, and a 10-stage automated pipeline that handles follow-ups, quotes, project kickoff notifications, and 10-year warranty scheduling seamlessly.",
+    metrics: [
+      { value: "10-Stage", label: "Pipeline" },
+      { value: "Instant", label: "Task Routing" },
+      { value: "Hybrid", label: "Automation" },
+    ],
+    tech: [
+      { name: "GoHighLevel", color: "orange" },
+      { name: "Webhooks", color: "purple" },
+      { name: "React", color: "purple" },
+    ],
+    liveLink: "https://apex-premium-roofing.vercel.app/",
+    sourceLink: "#",
+    liveLabel: "Live Site",
+    gallery: ["/images/project-automation.png"],
+  },
+  {
     image: "/images/sparky.png",
     category: "AI & Automation",
     title: "Sparky Electrical GHL Automation",
